@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/04 20:39:10 by nicky         #+#    #+#                 */
-/*   Updated: 2021/02/15 23:52:45 by nicky         ########   odam.nl         */
+/*   Updated: 2021/02/17 11:36:01 by nicky         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_printf(const char *format, ...)
 {
 	va_list		args;
 	t_fam		*fam;
-	int i;
+	int			i;
 
 	i = 1;
 	fam = malloc(sizeof(t_fam));
