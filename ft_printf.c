@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/04 20:39:10 by nicky         #+#    #+#                 */
-/*   Updated: 2021/02/17 11:36:01 by nicky         ########   odam.nl         */
+/*   Updated: 2021/02/17 11:52:30 by nicky         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,20 +26,18 @@ int		ft_printf(const char *format, ...)
 {
 	va_list		args;
 	t_fam		*fam;
-	int			i;
 
-	i = 1;
 	fam = malloc(sizeof(t_fam));
 	if (!format)
 		return (-1);
 	fam->format = format;
 	fam->count = 0;
 	va_start(fam->args, format);
-	while (*(fam->format) && i > 0)
+	while (*(fam->format))
 	{
 		initialize(fam);
 		if (*fam->format == '%')
-			i = parser(fam);
+			parser(fam);
 		else
 			ft_putchar(*fam->format, fam);
 		fam->format++;
