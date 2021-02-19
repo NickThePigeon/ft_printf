@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/08 15:47:54 by nicky         #+#    #+#                 */
-/*   Updated: 2021/02/19 21:50:23 by nicky         ########   odam.nl         */
+/*   Updated: 2021/02/19 21:54:06 by nicky         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int		parser(t_fam *fam)
 		fam->format++;
 	}
 	if (*fam->format == '.')
-		parser_prec(fam);
+		parse_prec(fam);
 	return (parse_type(fam));
 }
 

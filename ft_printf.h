@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/04 20:39:13 by nicky         #+#    #+#                 */
-/*   Updated: 2021/02/19 21:50:08 by nicky         ########   odam.nl         */
+/*   Updated: 2021/02/19 21:55:12 by nicky         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ typedef struct	s_fam
 }				t_fam;
 
 int				ft_printf(const char *format, ...);
+void			initialize(t_fam *fam);
 int				parse_type(t_fam *fam);
 int				parser(t_fam *fam);
 void			parse_prec(t_fam *fam);
