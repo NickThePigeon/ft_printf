@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/08 15:47:54 by nicky         #+#    #+#                 */
-/*   Updated: 2021/02/15 19:36:24 by nicky         ########   odam.nl         */
+/*   Updated: 2021/02/19 21:50:23 by nicky         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int		parser(t_fam *fam)
 {
+	initialize(fam);
 	fam->format++;
 	while (*fam->format == '-' || *fam->format == '0')
 	{
@@ -32,11 +33,11 @@ int		parser(t_fam *fam)
 		fam->format++;
 	}
 	if (*fam->format == '.')
-		parser_2(fam);
+		parser_prec(fam);
 	return (parse_type(fam));
 }
 
-void	parser_2(t_fam *fam)
+void	parse_prec(t_fam *fam)
 {
 	fam->format++;
 	fam->prec = 0;

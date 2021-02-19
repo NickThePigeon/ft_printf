@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/08 15:42:34 by nicky         #+#    #+#                 */
-/*   Updated: 2021/02/15 23:55:22 by nicky         ########   odam.nl         */
+/*   Updated: 2021/02/18 14:54:43 by nicky         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,6 @@ void		ft_putbasenbr2(unsigned long long num,
 
 void		ft_putchar(int n, t_fam *fam)
 {
-	write(1, &n, 1);
-	fam->count++;
+	if (write(1, &n, 1) == 1)
+		fam->count++;
 }
